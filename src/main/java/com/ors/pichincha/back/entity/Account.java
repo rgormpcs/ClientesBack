@@ -30,13 +30,16 @@ public class Account {
     @JoinColumn(name = "idPerson")
     private Client client;
 
-    public Account(Long idAccount, Integer accountNumber, String accountType, Double inicialBalance, Boolean state) {
+    public Account(Long idAccount, Integer accountNumber, String accountType, Double inicialBalance, Boolean state, Client client) {
         this.idAccount = idAccount;
         this.accountNumber = accountNumber;
         this.accountType = accountType;
         this.inicialBalance = inicialBalance;
         this.state = state;
+        this.client = client;
     }
+
+   
 
     public Account() {
     }
